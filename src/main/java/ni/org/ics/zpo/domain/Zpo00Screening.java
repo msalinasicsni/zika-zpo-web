@@ -21,20 +21,28 @@ public class Zpo00Screening extends BaseMetaData implements Auditable{
     private String preScreenId;
     private String eventName;
     private Date scrVisitDate;
+    private String scrConsentObta;
+    private String scrObDobDay;
+    private String scrObDobMon;
+    private Integer scrObDobYear;
+    private Integer scrObAge;
+    private String scrObAssent;
     private String scrConsentA; //envio muestras a EEUU
     private String scrConsentB; //USO FUTORO DE MUESTRAS BIOLOGICAS
     private String scrConsentC; //ESTUDIOS GENETICOS
-    private String nombre1Tutor;
-    private String nombre2Tutor;
-    private String apellido1Tutor;
-    private String apellido2Tutor;
-    private String relacionFamiliarTutor;
-    private String participanteOTutorAlfabeto;
-    private String testigoPresente;
-    private String nombre1Testigo;
-    private String nombre2Testigo;
-    private String apellido1Testigo;
-    private String apellido2Testigo;
+    private String scrName1Tutor;
+    private String scrName2Tutor;
+    private String scrLastName1Tuor;
+    private String scrLastName2Tutor;
+    private String scrFamilyRelationship;
+    private String scrFamilyRelOther;
+    private String scrIlliterate;
+    private String scrName1Witness;
+    private String scrName2Witness;
+    private String scrLastName1Witness;
+    private String scrLastName2Witness;
+    private String scrReasonNot;
+    private String scrReasonOther;
 
     @Id
     @Column(name = "record_id", nullable = false, length = 25)
@@ -73,6 +81,60 @@ public class Zpo00Screening extends BaseMetaData implements Auditable{
         this.scrVisitDate = scrVisitDate;
     }
 
+    @Column(name = "scr_consent_obta", nullable = true, length = 1)
+    public String getScrConsentObta() {
+        return scrConsentObta;
+    }
+
+    public void setScrConsentObta(String scrConsentObta) {
+        this.scrConsentObta = scrConsentObta;
+    }
+
+    @Column(name = "scr_ob_dob_day", nullable = true, length = 2)
+    public String getScrObDobDay() {
+        return scrObDobDay;
+    }
+
+    public void setScrObDobDay(String scrObDobDay) {
+        this.scrObDobDay = scrObDobDay;
+    }
+
+    @Column(name = "scr_ob_dob_mon", nullable = true, length = 2)
+    public String getScrObDobMon() {
+        return scrObDobMon;
+    }
+
+    public void setScrObDobMon(String scrObDobMon) {
+        this.scrObDobMon = scrObDobMon;
+    }
+
+    @Column(name = "scr_ob_dob_year", nullable = true)
+    public Integer getScrObDobYear() {
+        return scrObDobYear;
+    }
+
+    public void setScrObDobYear(Integer scrObDobYear) {
+        this.scrObDobYear = scrObDobYear;
+    }
+
+    @Column(name = "scr_ob_age", nullable = true)
+    public Integer getScrObAge() {
+        return scrObAge;
+    }
+
+    public void setScrObAge(Integer scrObAge) {
+        this.scrObAge = scrObAge;
+    }
+
+    @Column(name = "scr_ob_assent", nullable = true, length = 2)
+    public String getScrObAssent() {
+        return scrObAssent;
+    }
+
+    public void setScrObAssent(String scrObAssent) {
+        this.scrObAssent = scrObAssent;
+    }
+
     @Column(name = "scr_consent_a",columnDefinition = "", nullable = true, length = 2)
     public String getScrConsentA() {
         return scrConsentA;
@@ -100,104 +162,121 @@ public class Zpo00Screening extends BaseMetaData implements Auditable{
         this.scrConsentC = scrConsentC;
     }
 
-    @Column(name = "nombre1_tutor", length = 100)
-    public String getNombre1Tutor() {
-        return nombre1Tutor;
+    @Column(name = "name1_tutor", length = 100)
+    public String getScrName1Tutor() {
+        return scrName1Tutor;
     }
 
-    public void setNombre1Tutor(String nombre1Tutor) {
-        this.nombre1Tutor = nombre1Tutor;
+    public void setScrName1Tutor(String nombre1Tutor) {
+        this.scrName1Tutor = nombre1Tutor;
     }
 
-    @Column(name = "nombre2_tutor", length = 100)
-    public String getNombre2Tutor() {
-        return nombre2Tutor;
+    @Column(name = "name2_tutor", length = 100)
+    public String getScrName2Tutor() {
+        return scrName2Tutor;
     }
 
-    public void setNombre2Tutor(String nombre2Tutor) {
-        this.nombre2Tutor = nombre2Tutor;
+    public void setScrName2Tutor(String nombre2Tutor) {
+        this.scrName2Tutor = nombre2Tutor;
     }
 
-    @Column(name = "apellido1_tutor", length = 100)
-    public String getApellido1Tutor() {
-        return apellido1Tutor;
+    @Column(name = "lastname1_tutor", length = 100)
+    public String getScrLastName1Tuor() {
+        return scrLastName1Tuor;
     }
 
-    public void setApellido1Tutor(String apellido1Tutor) {
-        this.apellido1Tutor = apellido1Tutor;
+    public void setScrLastName1Tuor(String apellido1Tutor) {
+        this.scrLastName1Tuor = apellido1Tutor;
     }
 
-    @Column(name = "apellido2_tutor", length = 100)
-    public String getApellido2Tutor() {
-        return apellido2Tutor;
+    @Column(name = "lastname2_tutor", length = 100)
+    public String getScrLastName2Tutor() {
+        return scrLastName2Tutor;
     }
 
-    public void setApellido2Tutor(String apellido2Tutor) {
-        this.apellido2Tutor = apellido2Tutor;
+    public void setScrLastName2Tutor(String apellido2Tutor) {
+        this.scrLastName2Tutor = apellido2Tutor;
     }
 
-    @Column(name = "relacion_familiar", nullable = true, length = 50)
-    public String getRelacionFamiliarTutor() {
-        return relacionFamiliarTutor;
+    @Column(name = "family_relationship", nullable = true, length = 50)
+    public String getScrFamilyRelationship() {
+        return scrFamilyRelationship;
     }
 
-    public void setRelacionFamiliarTutor(String relacionFamiliar) {
-        this.relacionFamiliarTutor = relacionFamiliar;
+    public void setScrFamilyRelationship(String relacionFamiliar) {
+        this.scrFamilyRelationship = relacionFamiliar;
     }
 
-
-    @Column(name = "participante_tutor_alfabeto", length = 1)
-    public String getParticipanteOTutorAlfabeto() {
-        return participanteOTutorAlfabeto;
+    @Column(name = "family_relation_other", nullable = true, length = 100)
+    public String getScrFamilyRelOther() {
+        return scrFamilyRelOther;
     }
 
-    public void setParticipanteOTutorAlfabeto(String participanteOTutorAlfabeto) {
-        this.participanteOTutorAlfabeto = participanteOTutorAlfabeto;
+    public void setScrFamilyRelOther(String scrFamilyRelOther) {
+        this.scrFamilyRelOther = scrFamilyRelOther;
     }
 
-    @Column(name = "testigo_presente", length = 1)
-    public String getTestigoPresente() {
-        return testigoPresente;
+    @Column(name = "illiterate", length = 1)
+    public String getScrIlliterate() {
+        return scrIlliterate;
     }
 
-    public void setTestigoPresente(String testigoPresente) {
-        this.testigoPresente = testigoPresente;
+    public void setScrIlliterate(String testigoPresente) {
+        this.scrIlliterate = testigoPresente;
     }
 
-    @Column(name = "nombre1_testigo", length = 100)
-    public String getNombre1Testigo() {
-        return nombre1Testigo;
+    @Column(name = "name1_witness", length = 100)
+    public String getScrName1Witness() {
+        return scrName1Witness;
     }
 
-    public void setNombre1Testigo(String nombre1Testigo) {
-        this.nombre1Testigo = nombre1Testigo;
+    public void setScrName1Witness(String nombre1Testigo) {
+        this.scrName1Witness = nombre1Testigo;
     }
 
-    @Column(name = "nombre2_testigo", length = 100)
-    public String getNombre2Testigo() {
-        return nombre2Testigo;
+    @Column(name = "name2_witness", length = 100)
+    public String getScrName2Witness() {
+        return scrName2Witness;
     }
 
-    public void setNombre2Testigo(String nombre2Testigo) {
-        this.nombre2Testigo = nombre2Testigo;
+    public void setScrName2Witness(String nombre2Testigo) {
+        this.scrName2Witness = nombre2Testigo;
     }
 
-    @Column(name = "apellido1_testigo", length = 100)
-    public String getApellido1Testigo() {
-        return apellido1Testigo;
+    @Column(name = "lastaname1_witness", length = 100)
+    public String getScrLastName1Witness() {
+        return scrLastName1Witness;
     }
 
-    public void setApellido1Testigo(String apellido1Testigo) {
-        this.apellido1Testigo = apellido1Testigo;
+    public void setScrLastName1Witness(String apellido1Testigo) {
+        this.scrLastName1Witness = apellido1Testigo;
     }
 
-    @Column(name = "apellido2_testigo", length = 100)
-    public String getApellido2Testigo() {
-        return apellido2Testigo;
+    @Column(name = "lastname2_witness", length = 100)
+    public String getScrLastName2Witness() {
+        return scrLastName2Witness;
     }
 
-    public void setApellido2Testigo(String apellido2Testigo) {
-        this.apellido2Testigo = apellido2Testigo;
+    public void setScrLastName2Witness(String apellido2Testigo) {
+        this.scrLastName2Witness = apellido2Testigo;
+    }
+
+    @Column(name = "scr_reason_not", nullable = true, length = 2)
+    public String getScrReasonNot() {
+        return scrReasonNot;
+    }
+
+    public void setScrReasonNot(String scrReasonNot) {
+        this.scrReasonNot = scrReasonNot;
+    }
+
+    @Column(name = "scr_reason_other", nullable = true)
+    public String getScrReasonOther() {
+        return scrReasonOther;
+    }
+
+    public void setScrReasonOther(String scrReasonOther) {
+        this.scrReasonOther = scrReasonOther;
     }
 
 	@Override
