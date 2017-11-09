@@ -176,7 +176,7 @@ public class Zpo07dInfantBayleyScales extends BaseMetaData implements Auditable 
         this.infantBayenglish = infantBayenglish;
     }
 
-    @Column(name = "infant_med", length = 1)
+    @Column(name = "infant_med", length = 2)
     public String getInfantMed() {
         return infantMed;
     }

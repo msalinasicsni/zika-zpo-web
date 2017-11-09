@@ -32,7 +32,7 @@ public class ZpoControlConsentimientosRecepcionController {
      * Acepta una solicitud GET para JSON
      * @return JSON
      */
-    @RequestMapping(value = "zpRecepcionCons", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "zpoRecepcionCons", method = RequestMethod.GET, produces = "application/json")
     public @ResponseBody
     List<ZpoControlConsentimientosRecepcion> getZpoControlConsentimientosRecepcion() {
         logger.info("Descargando toda la informacion de los datos de los formulario ZpoControlConsentimientosRecepcion");
@@ -48,7 +48,7 @@ public class ZpoControlConsentimientosRecepcionController {
      * @param envio Objeto serializado de ZpoControlConsentimientosRecepcion
      * @return String con el resultado
      */
-    @RequestMapping(value = "zpRecepcionCons", method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "zpoRecepcionCons", method = RequestMethod.POST, consumes = "application/json")
     public @ResponseBody
     String saveZpoControlConsentimientosRecepcion(@RequestBody ZpoControlConsentimientosRecepcion[] envio) {
         logger.debug("Insertando/Actualizando formularios ZpoControlConsentimientosRecepcion");

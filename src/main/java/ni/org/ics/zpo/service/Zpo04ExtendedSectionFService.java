@@ -40,9 +40,8 @@ public class Zpo04ExtendedSectionFService {
     @SuppressWarnings("unchecked")
     public List<Zpo04ExtendedSectionF> getZpo04ExtendedSectionFByUser(String username){
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM Zpo04ExtendedSectionF zpo04f where zpo04f.pasive = '0' and zpo04f.recordId in (select zpo00.recordId from Zpo00Screening zpo00 where zpo00.pasive = '0' and zpo00.preScreenId in (select recId from ZpoPreScreening zpPre where zpPre.pasive = '0' and zpPre.cs in " +
-        		"(Select uc.centro.cs from UserCenter uc where uc.user.username =:usuarioactual and uc.pasive = '0')))");
-        query.setParameter("usuarioactual",username);
+        Query query = session.createQuery("FROM Zpo04ExtendedSectionF zpo04f where zpo04f.pasive = '0' and zpo04f.recordId in (select zpo00.recordId from Zpo00Screening zpo00 where zpo00.pasive = '0')");
+        //query.setParameter("usuarioactual",username);
         return query.list();
     }
 

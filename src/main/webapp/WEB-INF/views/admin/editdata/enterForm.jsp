@@ -107,24 +107,19 @@
                                                 <div class="col-md-6">
                                                     <select class="form-control" id="zpform" name="zpform">
                                                         <option value=""><spring:message code="lbl.select" /> ...</option>
-                                                        <option value="zp00_screening"><spring:message code="zp00" /></option>
-                                                        <option value="zp01_study_entry_section_a_to_d"><spring:message code="zp01AD" /></option>
-                                                        <option value="zp01_study_entry_section_e"><spring:message code="zp01E" /></option>
-                                                        <option value="zp01_study_entry_section_f_to_k"><spring:message code="zp01FK" /></option>
-                                                        <option value="zp02_biospecimen_collection"><spring:message code="zp02" /></option>
-                                                        <option value="zp03_monthly_visit"><spring:message code="zp03" /></option>
-                                                        <option value="zp04_trimester_visit_section_a_to_d"><spring:message code="zp04AD" /></option>
-                                                        <option value="zp04_trimester_visit_section_e"><spring:message code="zp04E" /></option>
-                                                        <option value="zp04_trimester_visit_section_f_to_h"><spring:message code="zp04FH" /></option>
-                                                        <option value="zp05_ultrasound_exam"><spring:message code="zp05" /></option>
-                                                        <option value="zp06_delivery_and_6week_visit"><spring:message code="zp06" /></option>
-                                                        <option value="zp08_study_exit"><spring:message code="zp08" /></option>
-                                                        <option value="zp07_infant_assessment"><spring:message code="zp07" /></option>
-                                                        <option value="zp02d_infant_biospecimen_collection"><spring:message code="zp02d" /></option>
-                                                        <option value="zp_cons_recepcion"><spring:message code="zpCR" /></option>
-                                                        <option value="zp_cons_salida"><spring:message code="zpCS" /></option>
-                                                        <option value="zp_reporte_us_recepcion"><spring:message code="zpRRUS" /></option>
-                                                        <option value="zp_reporte_us_salida"><spring:message code="zpSRUS" /></option>
+                                                        <option value="zpo00_screening"><spring:message code="zpo00" /></option>
+                                                        <option value="zpo01_study_entry_section_a_to_b"><spring:message code="zpo01AB" /></option>
+                                                        <option value="zpo01_study_entry_section_c"><spring:message code="zpo01C" /></option>
+                                                        <option value="zpo01_study_entry_section_d_to_f"><spring:message code="zpo01DF" /></option>
+                                                        <option value="zpo02_biospecimen_collection"><spring:message code="zpo02" /></option>
+                                                        <option value="zpo04_extended_section_a_to_d"><spring:message code="zpo04AD" /></option>
+                                                        <option value="zpo04_extended_section_e"><spring:message code="zpo04E" /></option>
+                                                        <option value="zpo04_extended_section_f"><spring:message code="zpo04F" /></option>
+                                                        <option value="zpo05_delivery"><spring:message code="zpo05" /></option>
+                                                        <option value="zpo08_study_exit"><spring:message code="zpo08" /></option>
+                                                        <option value="zpo07_infant_assessment"><spring:message code="zpo07" /></option>
+                                                        <option value="zpo_cons_recepcion"><spring:message code="zpoCR" /></option>
+                                                        <option value="zpo_cons_salida"><spring:message code="zpoCS" /></option>
                                                     </select>
                                                 </div>
                                             </div>

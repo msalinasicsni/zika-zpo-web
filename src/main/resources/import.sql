@@ -157,18 +157,16 @@ INSERT INTO `messages` (`messageKey`, `es`, `catPasive`) VALUES ( 'theme.sidebar
 
 /*exportar*/
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('download', '0', 'Descargar');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp00', '0', 'Formulario Zp00 Tamizaje');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp01AD', '0', 'Formulario Zp01 Ingreso Seccion A-D');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp01E', '0', 'Formulario Zp01 Ingreso Seccion E');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp01FK', '0', 'Formulario Zp01 Ingreso Seccion F-K');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp02', '0', 'Formulario Zp02 Muestras Biologicas');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp03', '0', 'Formulario Zp03 Visita Mensual');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp04AD', '0', 'Formulario Zp04 Visita Trimestral Seccion A-D');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp04E', '0', 'Formulario Zp04 Visita Trimestral Seccion E');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp04FH', '0', 'Formulario Zp04 Visita Trimestral Seccion F-H');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp05', '0', 'Formulario Zp05 Ultrasonido');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp06', '0', 'Formulario Zp06 Parto');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp08', '0', 'Formulario Zp08 Salida del estudio');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo00', '0', 'Formulario Zpo00 Tamizaje');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo01AB', '0', 'Formulario Zpo01 Ingreso Seccion A-B');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo01C', '0', 'Formulario Zpo01 Ingreso Seccion C');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo01DF', '0', 'Formulario Zpo01 Ingreso Seccion D-F');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo02', '0', 'Formulario Zpo02 Muestras Biologicas');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo04AD', '0', 'Formulario Zpo04 Extendido Seccion A-D');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo04E', '0', 'Formulario Zpo04 Extendido Seccion E');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo04F', '0', 'Formulario Zpo04 Extendido Seccion F');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo05', '0', 'Formulario Zpo05 Parto');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo08', '0', 'Formulario Zpo08 Salida del estudio');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('allforms', '0', 'Todos');
 INSERT INTO `messages` (`messageKey`, `en`, `catPasive`, `es`) VALUES ('form', 'Form', '0', 'Formulario');
 INSERT INTO `messages` (`messageKey`, `en`, `catPasive`, `es`) VALUES ('event', 'Event', '0', 'Evento');
@@ -263,20 +261,19 @@ INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('screenxday', '
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('total', '0', 'Total');
 
 /*INFANTE*/
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp07', '0', 'Formulario Zp07 Evaluacion del Infante');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo07', '0', 'Formulario Zp07 Evaluacion del Infante');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp02d', '0', 'Formulario Zp02d Muestras Biologicas de Infante');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('birth_arm_2', '0', 'Nacimiento');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('3_months_arm_2', '0', '3 Meses');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('6_months_arm_2', '0', '6 Meses');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('12_months_arm_2', '0', '12 Meses');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('24_months_arm_2', '0', '24 Meses');
 
 /*Editar datos de formularios*/
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('setnull', '0', 'Establecer como Null');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('editdata.help', '0', 'Para campos tipo fecha usar formato dd/mm/yyyy. Para campos fecha y hora usar formato dd/mm/yyyy HH:mm (24 horas)');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpCR', '0', 'Recepcion de consentimientos');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpCS', '0', 'Salida de consentimientos');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpRRUS', '0', 'Recepción de reportes US');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpSRUS', '0', 'Salida de reportes US');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpoCR', '0', 'Recepcion de consentimientos');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpoCS', '0', 'Salida de consentimientos');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_screening', '0', 'Ingreso');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_tri2', '0', '2do Trimestre');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_tri3', '0', '3er Trimestre');

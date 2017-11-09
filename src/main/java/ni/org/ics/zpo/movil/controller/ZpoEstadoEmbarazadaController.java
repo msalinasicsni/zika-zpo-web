@@ -33,7 +33,7 @@ public class ZpoEstadoEmbarazadaController {
      * Acepta una solicitud GET para JSON
      * @return JSON
      */
-    @RequestMapping(value = "zpEstadoEmb", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "zpoEstadoEmb", method = RequestMethod.GET, produces = "application/json")
     public @ResponseBody
     List<ZpoEstadoEmbarazada> getZpoEstadoEmbarazadas() {
         logger.info("Descargando toda la informacion de los datos de los formulario ZpoEstadoEmbarazada");
@@ -48,7 +48,7 @@ public class ZpoEstadoEmbarazadaController {
      * Acepta una solicitud GET para JSON
      * @return JSON
      */
-    @RequestMapping(value = "zpEstadoEmb/{username}", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "zpoEstadoEmb/{username}", method = RequestMethod.GET, produces = "application/json")
     public @ResponseBody
     List<ZpoEstadoEmbarazada> getZpoEstadoEmbarazadas(@PathVariable String username) {
         logger.info("Descargando toda la informacion de los datos de los formulario ZpoEstadoEmbarazadapara el usuario " +username);
@@ -64,7 +64,7 @@ public class ZpoEstadoEmbarazadaController {
      * @param envio Objeto serializado de ZpoEstadoEmbarazada
      * @return String con el resultado
      */
-    @RequestMapping(value = "zpEstadoEmb", method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "zpoEstadoEmb", method = RequestMethod.POST, consumes = "application/json")
     public @ResponseBody String saveZpoEstadoEmbarazada(@RequestBody ZpoEstadoEmbarazada[] envio) {
         logger.debug("Insertando/Actualizando formularios ZpoEstadoEmbarazada");
         if (envio == null){

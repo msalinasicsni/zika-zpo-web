@@ -81,7 +81,7 @@ public class Zpo07cInfantImageStudies extends BaseMetaData implements Auditable 
         this.infantImageDt = infantImageDt;
     }
 
-    @Column(name = "infant_head_altra", length = 1)
+    @Column(name = "infant_head_altra", length = 2)
     public String getInfantHeadAltra() {
         return infantHeadAltra;
     }
@@ -90,7 +90,7 @@ public class Zpo07cInfantImageStudies extends BaseMetaData implements Auditable 
         this.infantHeadAltra = infantHeadAltra;
     }
 
-    @Column(name = "infant_ultra_obtained", length = 1)
+    @Column(name = "infant_ultra_obtained", length = 2)
     public String getInfantUltraObtained() {
         return infantUltraObtained;
     }
@@ -136,7 +136,7 @@ public class Zpo07cInfantImageStudies extends BaseMetaData implements Auditable 
     }
 
 
-    @Column(name = "infant_head_ct", length = 1)
+    @Column(name = "infant_head_ct", length = 2)
     public String getInfantHeadCt() {
         return infantHeadCt;
     }
@@ -145,7 +145,7 @@ public class Zpo07cInfantImageStudies extends BaseMetaData implements Auditable 
         this.infantHeadCt = infantHeadCt;
     }
 
-    @Column(name = "infant_ct_obtained", length = 1)
+    @Column(name = "infant_ct_obtained", length = 2)
     public String getInfantCtObtained() {
         return infantCtObtained;
     }
@@ -191,7 +191,7 @@ public class Zpo07cInfantImageStudies extends BaseMetaData implements Auditable 
     }
 
 
-    @Column(name = "infant_cerebrospinal", length = 1)
+    @Column(name = "infant_cerebrospinal", length = 2)
     public String getInfantCerebrospinal() {
         return infantCerebrospinal;
     }
@@ -200,7 +200,7 @@ public class Zpo07cInfantImageStudies extends BaseMetaData implements Auditable 
         this.infantCerebrospinal = infantCerebrospinal;
     }
 
-    @Column(name = "infant_cerebro_stored", length = 1)
+    @Column(name = "infant_cerebro_stored", length = 2)
     public String getInfantCerebroStored() {
         return infantCerebroStored;
     }
@@ -245,7 +245,7 @@ public class Zpo07cInfantImageStudies extends BaseMetaData implements Auditable 
         this.infantCerebroSpecify = infantCerebroSpecify;
     }
 
-    @Column(name = "infant_mri", length = 1)
+    @Column(name = "infant_mri", length = 2)
     public String getInfantMri() {
         return infantMri;
     }
@@ -254,7 +254,7 @@ public class Zpo07cInfantImageStudies extends BaseMetaData implements Auditable 
         this.infantMri = infantMri;
     }
 
-    @Column(name = "infant_mri_obtained", length = 1)
+    @Column(name = "infant_mri_obtained", length = 2)
     public String getInfantMriObtained() {
         return infantMriObtained;
     }

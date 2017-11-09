@@ -39,9 +39,8 @@ public class Zpo07InfantAssessmentVisitService {
     @SuppressWarnings("unchecked")
     public List<Zpo07InfantAssessmentVisit> getZpo07InfantAssessmentVisitByUser(String username){
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM Zpo07InfantAssessmentVisit zpo07 where zpo07.pasive = '0' and zpo07.recordId in (select zpo00.recordId from Zpo00Screening zpo00 where zpo00.pasive = '0' and zpo00.preScreenId in (select recId from ZpoPreScreening zpPre where zpPre.pasive = '0' and zpPre.cs in " +
-                "(Select uc.centro.cs from UserCenter uc where uc.user.username =:usuarioactual and uc.pasive = '0')))");
-        query.setParameter("usuarioactual",username);
+        Query query = session.createQuery("FROM Zpo07InfantAssessmentVisit zpo07 where zpo07.pasive = '0' and zpo07.recordId in (select zpoI.recordId from Zpo00Screening zpo00, ZpoInfantData zpoI where zpo00.recordId = zpoI.pregnantId and zpo00.pasive = '0')");
+        //query.setParameter("usuarioactual",username);
         return query.list();
     }
 

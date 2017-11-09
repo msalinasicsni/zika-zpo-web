@@ -18,7 +18,6 @@ public class Zpo00Screening extends BaseMetaData implements Auditable{
 	 */
 	private static final long serialVersionUID = 1L;
 	private String recordId;
-    private String preScreenId;
     private String eventName;
     private Date scrVisitDate;
     private String scrConsentObta;
@@ -32,7 +31,7 @@ public class Zpo00Screening extends BaseMetaData implements Auditable{
     private String scrConsentC; //ESTUDIOS GENETICOS
     private String scrName1Tutor;
     private String scrName2Tutor;
-    private String scrLastName1Tuor;
+    private String scrLastName1Tutor;
     private String scrLastName2Tutor;
     private String scrFamilyRelationship;
     private String scrFamilyRelOther;
@@ -43,6 +42,7 @@ public class Zpo00Screening extends BaseMetaData implements Auditable{
     private String scrLastName2Witness;
     private String scrReasonNot;
     private String scrReasonOther;
+    private String scrCs;
 
     @Id
     @Column(name = "record_id", nullable = false, length = 25)
@@ -52,15 +52,6 @@ public class Zpo00Screening extends BaseMetaData implements Auditable{
 
     public void setRecordId(String recordId) {
         this.recordId = recordId;
-    }
-
-    @Column(name = "prescreen_id", nullable = true, length = 50)
-    public String getPreScreenId() {
-        return preScreenId;
-    }
-
-    public void setPreScreenId(String preScreenId) {
-        this.preScreenId = preScreenId;
     }
 
     @Column(name = "event_name", nullable = true, length = 100)
@@ -181,12 +172,12 @@ public class Zpo00Screening extends BaseMetaData implements Auditable{
     }
 
     @Column(name = "lastname1_tutor", length = 100)
-    public String getScrLastName1Tuor() {
-        return scrLastName1Tuor;
+    public String getScrLastName1Tutor() {
+        return scrLastName1Tutor;
     }
 
-    public void setScrLastName1Tuor(String apellido1Tutor) {
-        this.scrLastName1Tuor = apellido1Tutor;
+    public void setScrLastName1Tutor(String apellido1Tutor) {
+        this.scrLastName1Tutor = apellido1Tutor;
     }
 
     @Column(name = "lastname2_tutor", length = 100)
@@ -279,7 +270,16 @@ public class Zpo00Screening extends BaseMetaData implements Auditable{
         this.scrReasonOther = scrReasonOther;
     }
 
-	@Override
+    @Column(name = "scr_cs", nullable = true, length = 5)
+    public String getScrCs() {
+        return scrCs;
+    }
+
+    public void setScrCs(String scrCs) {
+        this.scrCs = scrCs;
+    }
+
+    @Override
 	public boolean isFieldAuditable(String fieldname) {
 		return true;
 	}

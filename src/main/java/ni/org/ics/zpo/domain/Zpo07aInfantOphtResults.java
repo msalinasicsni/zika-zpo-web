@@ -81,7 +81,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantOphType = infantOphType;
     }
 
-    @Column(name = "infant_eye_calci", length = 1)
+    @Column(name = "infant_eye_calci", length = 2)
     public String getInfantEyeCalci() {
         return infantEyeCalci;
     }
@@ -90,7 +90,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantEyeCalci = infantEyeCalci;
     }
 
-    @Column(name = "infant_choriore", length = 1)
+    @Column(name = "infant_choriore", length = 2)
     public String getInfantChoriore() {
         return infantChoriore;
     }
@@ -99,7 +99,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantChoriore = infantChoriore;
     }
 
-    @Column(name = "infant_focal_pm", length = 1)
+    @Column(name = "infant_focal_pm", length = 2)
     public String getInfantFocalPm() {
         return infantFocalPm;
     }
@@ -108,7 +108,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantFocalPm = infantFocalPm;
     }
 
-    @Column(name = "infant_choriore_atro", length = 1)
+    @Column(name = "infant_choriore_atro", length = 2)
     public String getInfantChorioreAtro() {
         return infantChorioreAtro;
     }
@@ -117,7 +117,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantChorioreAtro = infantChorioreAtro;
     }
 
-    @Column(name = "infant_microph", length = 1)
+    @Column(name = "infant_microph", length = 2)
     public String getInfantMicroph() {
         return infantMicroph;
     }
@@ -126,7 +126,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantMicroph = infantMicroph;
     }
 
-    @Column(name = "infant_microcornea", length = 1)
+    @Column(name = "infant_microcornea", length = 2)
     public String getInfantMicrocornea() {
         return infantMicrocornea;
     }
@@ -135,7 +135,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantMicrocornea = infantMicrocornea;
     }
 
-    @Column(name = "infant_iris_colobo", length = 1)
+    @Column(name = "infant_iris_colobo", length = 2)
     public String getInfantIrisColobo() {
         return infantIrisColobo;
     }
@@ -144,7 +144,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantIrisColobo = infantIrisColobo;
     }
 
-    @Column(name = "infant_optic_nerve", length = 1)
+    @Column(name = "infant_optic_nerve", length = 2)
     public String getInfantOpticNerve() {
         return infantOpticNerve;
     }
@@ -153,7 +153,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantOpticNerve = infantOpticNerve;
     }
 
-    @Column(name = "infant_sub_luxated", length = 1)
+    @Column(name = "infant_sub_luxated", length = 2)
     public String getInfantSubLuxated() {
         return infantSubLuxated;
     }
@@ -162,7 +162,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantSubLuxated = infantSubLuxated;
     }
 
-    @Column(name = "infant_strabismus", length = 1)
+    @Column(name = "infant_strabismus", length = 2)
     public String getInfantStrabismus() {
         return infantStrabismus;
     }
@@ -171,7 +171,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantStrabismus = infantStrabismus;
     }
 
-    @Column(name = "infant_eye_other", length = 1)
+    @Column(name = "infant_eye_other", length = 2)
     public String getInfantEyeOther() {
         return infantEyeOther;
     }
@@ -189,7 +189,7 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
         this.infantEyeOtherSpecify = infantEyeOtherSpecify;
     }
 
-    @Column(name = "infant_referral_ophth", length = 1)
+    @Column(name = "infant_referral_ophth", length = 2)
     public String getInfantReferralOphth() {
         return infantReferralOphth;
     }
@@ -206,9 +206,6 @@ public class Zpo07aInfantOphtResults extends BaseMetaData implements Auditable {
     public void setInfantEyeFile(String infantEyeFile) {
         this.infantEyeFile = infantEyeFile;
     }
-
-
-
 
     @Column(name = "infant_eye_com", length = 1)
     public String getInfantEyeCom() {

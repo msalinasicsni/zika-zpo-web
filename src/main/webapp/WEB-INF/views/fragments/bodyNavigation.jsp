@@ -64,11 +64,6 @@
                                     <i class="fa fa-group"></i>
                                     <spring:message code="adminusers" /></a>
                             </li>
-                            <li class="export">
-                                <a href="<spring:url value="/admin/export/" htmlEscape="true "/>">
-                                    <i class="fa fa-file-text"></i>
-                                    <spring:message code="export" /></a>
-                            </li>
                             <li class="query">
                                 <a href="<spring:url value="/admin/query/" htmlEscape="true "/>">
                                     <i class="fa fa-question-circle"></i>

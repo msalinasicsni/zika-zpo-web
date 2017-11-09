@@ -103,9 +103,7 @@
 										<th><spring:message code="date" /></th>
 										<th><spring:message code="total" /></th>
 										<th>CSSFV</th>
-										<th>CSVL</th>
 										<th>CSFB</th>
-										<th>CSEL</th>
 									</tr>
 								</thead>
 								<c:forEach items="${tamizajesDia}" var="tamizajeDia">
@@ -114,8 +112,6 @@
 										<td align="right"><c:out value="${tamizajeDia[1]}" /></td>
 										<td align="right"><c:out value="${tamizajeDia[2]}" /></td>
 										<td align="right"><c:out value="${tamizajeDia[3]}" /></td>
-										<td align="right"><c:out value="${tamizajeDia[4]}" /></td>
-										<td align="right"><c:out value="${tamizajeDia[5]}" /></td>
 									</tr>
 								</c:forEach>
 							</table>
@@ -229,7 +225,7 @@
 			, september: "${september}", october: "${october}", november: "${november}", december: "${december}", dataTablesTTSWF: "${dataTablesTTSWF}", exportar: "${exportar}"
 			, lenguaje: "${dataTablesLang}", total: "${total}"};
 		Index.initDashboardDaterange(parametrosDateRange);
-		var totales = [];var cs1 = [];var cs2 = [];var cs3 = [];var cs4 = [];var fechas = [];var sumTotal = 0;var sumCs1 = 0;var sumCs2 = 0;var sumCs3 = 0;var sumCs4 = 0;
+		var totales = [];var cs1 = [];var cs2 = [];var fechas = [];var sumTotal = 0;var sumCs1 = 0;var sumCs2 = 0;
 		<c:forEach var="tamizaje" items="${tamizajesDia}">
 			var d = new Date("${tamizaje[0]}");
 			fechas.push([d.yyyymmdd()]);
@@ -239,13 +235,9 @@
 			sumCs1 = sumCs1 + parseInt("${tamizaje[2]}");
 			cs2.push(["${tamizaje[0]}", "${tamizaje[3]}"]);
 			sumCs2 = sumCs2 + parseInt("${tamizaje[3]}");
-			cs3.push(["${tamizaje[0]}", "${tamizaje[4]}"]);
-			sumCs3 = sumCs3 + parseInt("${tamizaje[4]}");
-			cs4.push(["${tamizaje[0]}", "${tamizaje[5]}"]);
-			sumCs4 = sumCs4 + parseInt("${tamizaje[5]}");
 		</c:forEach>
-		var parametrosChart = {fechas: fechas,totales: totales, cs1: cs1, cs2: cs2, cs3:cs3, cs4:cs4
-			, sumTotal: sumTotal, sumCs1: sumCs1, sumCs2: sumCs2, sumCs3: sumCs3, sumCs4: sumCs4, total: "${total}"};
+		var parametrosChart = {fechas: fechas,totales: totales, cs1: cs1, cs2: cs2
+			, sumTotal: sumTotal, sumCs1: sumCs1, sumCs2: sumCs2, total: "${total}"};
 		Index.initCharts(parametrosChart);
 	});
 	

@@ -41,7 +41,7 @@ var EditData = function () {
                     },
                     recordId: {
                         required: true,
-                        pattern: /^07[0-9][0-9][0-9][0-9][0-3][A-Y]$/
+                        pattern: /^ZPO\d{3}[0-3]$/
                     },
                     zpEventRC: {
                         required: true
