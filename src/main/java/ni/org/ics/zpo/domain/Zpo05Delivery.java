@@ -20,7 +20,7 @@ public class Zpo05Delivery extends BaseMetaData implements Auditable {
     private String recordId;
     private String eventName;
     private Date deliVisitDate;
-    private String deliOriginInfo;
+    private String deliOriginInfo;//multiple
     private Float deliMotherWt;
     private String deliWtUnit;
     private Integer deliSystolic;
@@ -90,7 +90,7 @@ public class Zpo05Delivery extends BaseMetaData implements Auditable {
         this.deliVisitDate = deliVisitDate;
     }
 
-    @Column(name = "deli_origin_info", nullable = true, length = 1)
+    @Column(name = "deli_origin_info", nullable = true, length = 10)
     public String getDeliOriginInfo() {
         return deliOriginInfo;
     }
