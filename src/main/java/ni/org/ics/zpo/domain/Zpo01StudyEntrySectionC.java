@@ -1387,7 +1387,7 @@ public class Zpo01StudyEntrySectionC extends BaseMetaData implements Auditable {
         this.seaCareYear = seaCareYear;
     }
 
-    @Column(name = "sea_care_facility", nullable = true, length = 10)
+    @Column(name = "sea_care_facility", nullable = true, length = 100)
     public String getSeaCareFacility() {
         return seaCareFacility;
     }
@@ -1405,7 +1405,7 @@ public class Zpo01StudyEntrySectionC extends BaseMetaData implements Auditable {
         this.seaHospitalized = seaHospitalized;
     }
 
-    @Column(name = "sea_hospital", nullable = true, length = 10)
+    @Column(name = "sea_hospital", nullable = true, length = 100)
     public String getSeaHospital() {
         return seaHospital;
     }

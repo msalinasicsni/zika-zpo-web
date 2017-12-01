@@ -89,7 +89,7 @@ public class ZpoInfantData extends BaseMetaData implements Auditable {
         this.infantDeliveryOccur = infantDeliveryOccur;
     }
 
-    @Column(name = "infant_hospital_id", nullable = true, length = 25)
+    @Column(name = "infant_hospital_id", nullable = true, length = 100)
     public String getInfantHospitalId() {
         return infantHospitalId;
     }
@@ -98,7 +98,7 @@ public class ZpoInfantData extends BaseMetaData implements Auditable {
         this.infantHospitalId = infantHospitalId;
     }
 
-    @Column(name = "infant_clinic_id", nullable = true, length = 25)
+    @Column(name = "infant_clinic_id", nullable = true, length = 100)
     public String getInfantClinicId() {
         return infantClinicId;
     }
@@ -152,7 +152,7 @@ public class ZpoInfantData extends BaseMetaData implements Auditable {
         this.infantSexBaby = infantSexBaby;
     }
 
-    @Column(name = "infant_consent_infant", nullable = true, length = 1)
+    @Column(name = "infant_consent_infant", nullable = true, length = 2)
     public String getInfantConsentInfant() {
         return infantConsentInfant;
     }

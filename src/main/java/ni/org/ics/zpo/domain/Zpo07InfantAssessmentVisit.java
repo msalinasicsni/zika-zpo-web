@@ -1246,7 +1246,7 @@ public class Zpo07InfantAssessmentVisit extends BaseMetaData implements Auditabl
         this.infantCareYr = infantCareYr;
     }
 
-    @Column(name = "infant_care_facility", length = 8)
+    @Column(name = "infant_care_facility", length = 100)
     public String getInfantCareFacility() {
         return infantCareFacility;
     }
@@ -1264,7 +1264,7 @@ public class Zpo07InfantAssessmentVisit extends BaseMetaData implements Auditabl
         this.infantHospitalized = infantHospitalized;
     }
 
-    @Column(name = "infant_hospital", length = 50)
+    @Column(name = "infant_hospital", length = 100)
     public String getInfantHospital() {
         return infantHospital;
     }

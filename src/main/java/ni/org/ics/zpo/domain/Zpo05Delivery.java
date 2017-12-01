@@ -189,7 +189,7 @@ public class Zpo05Delivery extends BaseMetaData implements Auditable {
         this.deliDeliveryOccur = deliDeliveryOccur;
     }
 
-    @Column(name = "deli_hospital_id", nullable = true, length = 25)
+    @Column(name = "deli_hospital_id", nullable = true, length = 100)
     public String getDeliHospitalId() {
         return deliHospitalId;
     }
@@ -198,7 +198,7 @@ public class Zpo05Delivery extends BaseMetaData implements Auditable {
         this.deliHospitalId = deliHospitalId;
     }
 
-    @Column(name = "deli_clinic_id", nullable = true, length = 25)
+    @Column(name = "deli_clinic_id", nullable = true, length = 100)
     public String getDeliClinicId() {
         return deliClinicId;
     }
