@@ -27,10 +27,10 @@ var Index = function () {
     				label : 'CSSFV-('+parametrosChart.sumCs1+')'
     			}, {
                     data: parametrosChart.cs2,
-                    label: 'CSVL-('+parametrosChart.sumCs2+')'
+                    label: 'CSFB-('+parametrosChart.sumCs2+')'
                 }, {
                     data: parametrosChart.cs3,
-                    label: 'CSFB-('+parametrosChart.sumCs3+')'
+                    label: 'CSVL-('+parametrosChart.sumCs3+')'
                 }, {
                     data: parametrosChart.cs4,
                     label: 'CSEL-('+parametrosChart.sumCs4+')'

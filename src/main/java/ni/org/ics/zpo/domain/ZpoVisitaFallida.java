@@ -42,7 +42,7 @@ public class ZpoVisitaFallida  extends BaseMetaData {
         this.razon = razon;
     }
 
-    @Column(name = "OTRA_RAZON", nullable = false, length = 50)
+    @Column(name = "OTRA_RAZON", nullable = false, length = 100)
     public String getOtraRazon() {
         return otraRazon;
     }

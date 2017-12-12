@@ -262,7 +262,11 @@ INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('total', '0', '
 
 /*INFANTE*/
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo07', '0', 'Formulario Zp07 Evaluacion del Infante');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zp02d', '0', 'Formulario Zp02d Muestras Biologicas de Infante');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo07a', '0', 'Formulario Zp07 Resultados Oftalmologicos');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo07b', '0', 'Formulario Zp07 Resultados de examenes Audiologicos');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo07c', '0', 'Formulario Zp07 Resultados de Estudios de Imagenes');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo07d', '0', 'Formulario Zp07 Escala de Bayley De Desarrollo Infantil');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpoInfante', '0', 'Formulario Datos del Infante');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('birth_arm_2', '0', 'Nacimiento');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('3_months_arm_2', '0', '3 Meses');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('6_months_arm_2', '0', '6 Meses');

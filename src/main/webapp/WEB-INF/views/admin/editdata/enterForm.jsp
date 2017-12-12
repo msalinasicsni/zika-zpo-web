@@ -117,7 +117,12 @@
                                                         <option value="zpo04_extended_section_f"><spring:message code="zpo04F" /></option>
                                                         <option value="zpo05_delivery"><spring:message code="zpo05" /></option>
                                                         <option value="zpo08_study_exit"><spring:message code="zpo08" /></option>
+                                                        <option value="zpo_datos_infante"><spring:message code="zpoInfante" /></option>
                                                         <option value="zpo07_infant_assessment"><spring:message code="zpo07" /></option>
+                                                        <option value="zpo07a_infant_opht_results"><spring:message code="zpo07a" /></option>
+                                                        <option value="zpo07b_infant_audio_results"><spring:message code="zpo07b" /></option>
+                                                        <option value="zpo07c_infant_image_studies"><spring:message code="zpo07c" /></option>
+                                                        <option value="zpo07d_bayley_scales"><spring:message code="zpo07d" /></option>
                                                         <option value="zpo_cons_recepcion"><spring:message code="zpoCR" /></option>
                                                         <option value="zpo_cons_salida"><spring:message code="zpoCS" /></option>
                                                     </select>

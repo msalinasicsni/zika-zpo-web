@@ -118,6 +118,8 @@ public class EditarDatosService {
         }else if(tabla.equalsIgnoreCase("zp_cons_recepcion") || tabla.equalsIgnoreCase("zp_cons_salida")) {
             nombreCampoId = "codigo";
             nombreCampoEvento = "";
+        }else if (tabla.equalsIgnoreCase("zpo_datos_infante")){
+            nombreCampoEvento = "";
         }
 
         /*determinar los registros que se van a actualizar*/
@@ -178,6 +180,9 @@ public class EditarDatosService {
                     pstm.setInt(1, Integer.valueOf(valor));
                 else if (type == Types.FLOAT || type == Types.REAL)
                     pstm.setFloat(1, Float.valueOf(valor));
+                else if (type == Types.DOUBLE){
+                    pstm.setDouble(1, Double.valueOf(valor));
+                }
             }
 
             resultado=pstm.executeUpdate();
