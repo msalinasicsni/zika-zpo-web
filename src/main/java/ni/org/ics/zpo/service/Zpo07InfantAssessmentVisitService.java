@@ -264,7 +264,7 @@ public class Zpo07InfantAssessmentVisitService {
      */
     public Zpo07InfantAssessmentVisit getZp07InfantAssessmentVisit(String recordId, String event){
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM Zp07InfantAssessmentVisit where recordId = :recordId and redcapEventName = :event");
+        Query query = session.createQuery("FROM Zp07InfantAssessmentVisit where recordId = :recordId and eventName = :event");
         query.setParameter("recordId",recordId);
         query.setParameter("event",event);
         return (Zpo07InfantAssessmentVisit)query.uniqueResult();

@@ -70,7 +70,7 @@ public class Zpo07InfantAssessmentVisitController {
         else{
             List<Zpo07InfantAssessmentVisit> zpo07InfantAssessmentVisits = Arrays.asList(envio);
             for (Zpo07InfantAssessmentVisit zpo07InfantAssessmentVisit : zpo07InfantAssessmentVisits){
-                zpo07InfantAssessmentVisitService.saveZpo07InfantAssessmentVisit(zpo07InfantAssessmentVisit);
+                zpo07InfantAssessmentVisitService.saveZp07InfantAssessmentVisit(zpo07InfantAssessmentVisit);
             }
         }
         return "Datos recibidos!";
