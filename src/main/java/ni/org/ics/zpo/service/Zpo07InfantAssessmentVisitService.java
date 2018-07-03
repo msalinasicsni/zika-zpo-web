@@ -45,226 +45,226 @@ public class Zpo07InfantAssessmentVisitService {
     }
 
     /**
-     * Guardar un formulario Zp07InfantAssessmentVisit
-     * @param zp07InfantAssessmentVisit a guardar
+     * Guardar un formulario Zpo07InfantAssessmentVisit
+     * @param zpo07InfantAssessmentVisit a guardar
      */
-    public void saveZp07InfantAssessmentVisit(Zpo07InfantAssessmentVisit zp07InfantAssessmentVisit) {
+    public void saveZpo07InfantAssessmentVisit(Zpo07InfantAssessmentVisit zpo07InfantAssessmentVisit) {
         Session session = sessionFactory.getCurrentSession();
 
-        if (zp07InfantAssessmentVisit != null) {
-            Zpo07InfantAssessmentVisit zp07 = getZp07InfantAssessmentVisit(zp07InfantAssessmentVisit.getRecordId(), zp07InfantAssessmentVisit.getEventName());
+        if (zpo07InfantAssessmentVisit != null) {
+            Zpo07InfantAssessmentVisit zpo07 = getZpo07InfantAssessmentVisit(zpo07InfantAssessmentVisit.getRecordId(), zpo07InfantAssessmentVisit.getEventName());
 
-            if (zp07 != null) {
-                if (zp07InfantAssessmentVisit.getPart1() != null) {
-                    if ((zp07InfantAssessmentVisit.getPart1() == 2) || (zp07InfantAssessmentVisit.getPart1() == 1 && zp07.getPart1() == null)) {
-                        zp07.setInfantVisitDate(zp07InfantAssessmentVisit.getInfantVisitDate());
-                        zp07.setInfantStatus(zp07InfantAssessmentVisit.getInfantStatus());
-                        zp07.setInfantDeathDt(zp07InfantAssessmentVisit.getInfantDeathDt());
-                        zp07.setInfantVisit(zp07InfantAssessmentVisit.getInfantVisit());
-                        zp07.setInfantTemp(zp07InfantAssessmentVisit.getInfantTemp());
-                        zp07.setInfantTmpUnit(zp07InfantAssessmentVisit.getInfantTmpUnit());
-                        zp07.setInfantWt(zp07InfantAssessmentVisit.getInfantWt());
-                        zp07.setInfantWtUnit(zp07InfantAssessmentVisit.getInfantWtUnit());
-                        zp07.setInfantWtPercen(zp07InfantAssessmentVisit.getInfantWtPercen());
-                        zp07.setInfantWtpercenNa(zp07InfantAssessmentVisit.getInfantWtpercenNa());
-                        zp07.setInfantLength(zp07InfantAssessmentVisit.getInfantLength());
-                        zp07.setInfantLengthPercen(zp07InfantAssessmentVisit.getInfantLengthPercen());
-                        zp07.setInfantLenpercenNa(zp07InfantAssessmentVisit.getInfantLenpercenNa());
-                        zp07.setInfantHeadcircu(zp07InfantAssessmentVisit.getInfantHeadcircu());
-                        zp07.setInfantHeapercen(zp07InfantAssessmentVisit.getInfantHeapercen());
-                        zp07.setInfantHeapercenNa(zp07InfantAssessmentVisit.getInfantHeapercenNa());
-                        zp07.setInfantHeasize(zp07InfantAssessmentVisit.getInfantHeasize());
-                    //  zp07.setInfantApgarNa(zp07InfantAssessmentVisit.getInfantApgarNa());
-                    //  zp07.setInfantApgar1min(zp07InfantAssessmentVisit.getInfantApgar1min());
-                    //  zp07.setInfantApgar5min(zp07InfantAssessmentVisit.getInfantApgar5min());
-                        zp07.setInfantSkinEvalu(zp07InfantAssessmentVisit.getInfantSkinEvalu());
-                        zp07.setInfantRash(zp07InfantAssessmentVisit.getInfantRash());
-                        zp07.setInfantScarring(zp07InfantAssessmentVisit.getInfantScarring());
-                        zp07.setInfantOrganEvalu(zp07InfantAssessmentVisit.getInfantOrganEvalu());
-                        zp07.setInfantAbdominal(zp07InfantAssessmentVisit.getInfantAbdominal());
-                        zp07.setInfantLiverSpleen(zp07InfantAssessmentVisit.getInfantLiverSpleen());
-                        zp07.setInfantOae(zp07InfantAssessmentVisit.getInfantOae());
-                        zp07.setInfantHearingTest(zp07InfantAssessmentVisit.getInfantHearingTest());
-                        zp07.setInfantHearingOverall(zp07InfantAssessmentVisit.getInfantHearingOverall());
-                        zp07.setInfantRoae(zp07InfantAssessmentVisit.getInfantRoae());
-                        zp07.setInfantRaabr(zp07InfantAssessmentVisit.getInfantRaabr());
-                        zp07.setInfantLoae(zp07InfantAssessmentVisit.getInfantLoae());
-                        zp07.setInfantLaabr(zp07InfantAssessmentVisit.getInfantLaabr());
-                        zp07.setInfantBreastfeeding(zp07InfantAssessmentVisit.getInfantBreastfeeding());
-                        zp07.setInfantBreastReason(zp07InfantAssessmentVisit.getInfantBreastReason());
-                        zp07.setInfantBreastOther(zp07InfantAssessmentVisit.getInfantBreastOther());
-                        zp07.setInfantNeurodeve(zp07InfantAssessmentVisit.getInfantNeurodeve());
-                        zp07.setInfantAsymType(zp07InfantAssessmentVisit.getInfantAsymType());
-                        zp07.setInfantOtherMove(zp07InfantAssessmentVisit.getInfantOtherMove());
-                        zp07.setInfantExhibitOther(zp07InfantAssessmentVisit.getInfantExhibitOther());
-                        zp07.setInfantMicroce(zp07InfantAssessmentVisit.getInfantMicroce());
-                        zp07.setInfantDefinition(zp07InfantAssessmentVisit.getInfantDefinition());
-                        zp07.setInfantFurtherNeuro(zp07InfantAssessmentVisit.getInfantFurtherNeuro());
-                        zp07.setInfantFeverSymptom(zp07InfantAssessmentVisit.getInfantFeverSymptom());
-                        zp07.setInfantRashSymptom(zp07InfantAssessmentVisit.getInfantRashSymptom());
-                        zp07.setInfantItch(zp07InfantAssessmentVisit.getInfantItch());
-                        zp07.setInfantRashFirst(zp07InfantAssessmentVisit.getInfantRashFirst());
-                        zp07.setInfantRashDy(zp07InfantAssessmentVisit.getInfantRashDy());
-                        zp07.setInfantRashMn(zp07InfantAssessmentVisit.getInfantRashMn());
-                        zp07.setInfantRashYr(zp07InfantAssessmentVisit.getInfantRashYr());
-                        zp07.setInfantRashDur(zp07InfantAssessmentVisit.getInfantRashDur());
-                        zp07.setInfantRashSpread(zp07InfantAssessmentVisit.getInfantRashSpread());
-                        zp07.setInfantSpreadPart(zp07InfantAssessmentVisit.getInfantSpreadPart());
-                        zp07.setInfantFeverExperience(zp07InfantAssessmentVisit.getInfantFeverExperience());
-                        zp07.setInfantTempMeasure(zp07InfantAssessmentVisit.getInfantTempMeasure());
-                        zp07.setInfantHighTemp(zp07InfantAssessmentVisit.getInfantHighTemp());
-                        zp07.setInfantHightemUnit(zp07InfantAssessmentVisit.getInfantHightemUnit());
-                        zp07.setInfantTempunknown(zp07InfantAssessmentVisit.getInfantTempunknown());
-                        zp07.setInfantFeverDy(zp07InfantAssessmentVisit.getInfantFeverDy());
-                        zp07.setInfantFeverMn(zp07InfantAssessmentVisit.getInfantFeverMn());
-                        zp07.setInfantFeverYr(zp07InfantAssessmentVisit.getInfantFeverYr());
-                        zp07.setInfantFeverDur(zp07InfantAssessmentVisit.getInfantFeverDur());
-                        zp07.setInfantRedeyes(zp07InfantAssessmentVisit.getInfantRedeyes());
-                        zp07.setInfantRedeyesDy(zp07InfantAssessmentVisit.getInfantRedeyesDy());
-                        zp07.setInfantRedeyesMn(zp07InfantAssessmentVisit.getInfantRedeyesMn());
-                        zp07.setInfantRedeyesYr(zp07InfantAssessmentVisit.getInfantRedeyesYr());
-                        zp07.setInfantRedeyesDur(zp07InfantAssessmentVisit.getInfantRedeyesDur());
-                        zp07.setInfantJoint(zp07InfantAssessmentVisit.getInfantJoint());
-                        zp07.setInfantJointDy(zp07InfantAssessmentVisit.getInfantJointDy());
-                        zp07.setInfantJointMn(zp07InfantAssessmentVisit.getInfantJointMn());
-                        zp07.setInfantJointYr(zp07InfantAssessmentVisit.getInfantJointYr());
-                        zp07.setInfantJointDur(zp07InfantAssessmentVisit.getInfantJointDur());
-                        zp07.setInfantHeadache(zp07InfantAssessmentVisit.getInfantHeadache());
-                        zp07.setInfantHeadacheDy(zp07InfantAssessmentVisit.getInfantHeadacheDy());
-                        zp07.setInfantHeadacheMn(zp07InfantAssessmentVisit.getInfantHeadacheMn());
-                        zp07.setInfantHeadacheYr(zp07InfantAssessmentVisit.getInfantHeadacheYr());
-                        zp07.setInfantHeadaDur(zp07InfantAssessmentVisit.getInfantHeadaDur());
-                        zp07.setInfantSymptomOther(zp07InfantAssessmentVisit.getInfantSymptomOther());
-                        zp07.setInfantSpecifySymptom(zp07InfantAssessmentVisit.getInfantSpecifySymptom());
-                        zp07.setInfantOtherSymptom(zp07InfantAssessmentVisit.getInfantOtherSymptom());
-                        zp07.setInfantMedicare(zp07InfantAssessmentVisit.getInfantMedicare());
-                        zp07.setInfantCareDy(zp07InfantAssessmentVisit.getInfantCareDy());
-                        zp07.setInfantCareMn(zp07InfantAssessmentVisit.getInfantCareMn());
-                        zp07.setInfantCareYr(zp07InfantAssessmentVisit.getInfantCareYr());
-                        zp07.setInfantCareFacility(zp07InfantAssessmentVisit.getInfantCareFacility());
-                        zp07.setInfantHospitalized(zp07InfantAssessmentVisit.getInfantHospitalized());
-                        zp07.setInfantHospital(zp07InfantAssessmentVisit.getInfantHospital());
-                        zp07.setInfantDiagRubella(zp07InfantAssessmentVisit.getInfantDiagRubella());
-                        zp07.setInfantDiagDengue(zp07InfantAssessmentVisit.getInfantDiagDengue());
-                        zp07.setInfantDiagChikung(zp07InfantAssessmentVisit.getInfantDiagChikung());
-                        zp07.setInfantDiagZika(zp07InfantAssessmentVisit.getInfantDiagZika());
-                        zp07.setInfantDiagCytome(zp07InfantAssessmentVisit.getInfantDiagCytome());
-                        zp07.setInfantMedicine(zp07InfantAssessmentVisit.getInfantMedicine());
-                        zp07.setInfantMedName(zp07InfantAssessmentVisit.getInfantMedName());
-                        // zp07.setInfantSpDiary(zp07InfantAssessmentVisit.getInfantSpDiary());
-                        // zp07.setInfantPreResults(zp07InfantAssessmentVisit.getInfantPreResults());
-                        // zp07.setInfantReferr(zp07InfantAssessmentVisit.getInfantReferr());
-                        // zp07.setInfantOtherLab(zp07InfantAssessmentVisit.getInfantOtherLab());
-                        zp07.setInfantCommentsYn(zp07InfantAssessmentVisit.getInfantCommentsYn());
-                        zp07.setInfantComments2(zp07InfantAssessmentVisit.getInfantComments2());
-                        zp07.setInfantIdCompleting(zp07InfantAssessmentVisit.getInfantIdCompleting());
-                        zp07.setInfantDtComp(zp07InfantAssessmentVisit.getInfantDtComp());
-                        zp07.setInfantIdReviewer(zp07InfantAssessmentVisit.getInfantIdReviewer());
-                        zp07.setInfantDtReview(zp07InfantAssessmentVisit.getInfantDtReview());
-                        zp07.setInfantDtEnter(zp07InfantAssessmentVisit.getInfantDtEnter());
-                        zp07.setInfantIdDataEntry(zp07InfantAssessmentVisit.getInfantIdDataEntry());
-                        zp07.setPart1(1);
-                        zp07.setIdInstancia(zp07InfantAssessmentVisit.getIdInstancia());
-                        zp07.setInfantDob(zp07InfantAssessmentVisit.getInfantDob());
-                        // zp07.setInfantWeeks(zp07InfantAssessmentVisit.getInfantWeeks());
-                        // zp07.setInfantDays(zp07InfantAssessmentVisit.getInfantDays());
-                         zp07.setInfantExhibited(zp07InfantAssessmentVisit.getInfantExhibited());
+            if (zpo07 != null) {
+                if (zpo07InfantAssessmentVisit.getPart1() != null) {
+                    if ((zpo07InfantAssessmentVisit.getPart1() == 2) || (zpo07InfantAssessmentVisit.getPart1() == 1 && zpo07.getPart1() == null)) {
+                        zpo07.setInfantVisitDate(zpo07InfantAssessmentVisit.getInfantVisitDate());
+                        zpo07.setInfantStatus(zpo07InfantAssessmentVisit.getInfantStatus());
+                        zpo07.setInfantDeathDt(zpo07InfantAssessmentVisit.getInfantDeathDt());
+                        zpo07.setInfantVisit(zpo07InfantAssessmentVisit.getInfantVisit());
+                        zpo07.setInfantTemp(zpo07InfantAssessmentVisit.getInfantTemp());
+                        zpo07.setInfantTmpUnit(zpo07InfantAssessmentVisit.getInfantTmpUnit());
+                        zpo07.setInfantWt(zpo07InfantAssessmentVisit.getInfantWt());
+                        zpo07.setInfantWtUnit(zpo07InfantAssessmentVisit.getInfantWtUnit());
+                        zpo07.setInfantWtPercen(zpo07InfantAssessmentVisit.getInfantWtPercen());
+                        zpo07.setInfantWtpercenNa(zpo07InfantAssessmentVisit.getInfantWtpercenNa());
+                        zpo07.setInfantLength(zpo07InfantAssessmentVisit.getInfantLength());
+                        zpo07.setInfantLengthPercen(zpo07InfantAssessmentVisit.getInfantLengthPercen());
+                        zpo07.setInfantLenpercenNa(zpo07InfantAssessmentVisit.getInfantLenpercenNa());
+                        zpo07.setInfantHeadcircu(zpo07InfantAssessmentVisit.getInfantHeadcircu());
+                        zpo07.setInfantHeapercen(zpo07InfantAssessmentVisit.getInfantHeapercen());
+                        zpo07.setInfantHeapercenNa(zpo07InfantAssessmentVisit.getInfantHeapercenNa());
+                        zpo07.setInfantHeasize(zpo07InfantAssessmentVisit.getInfantHeasize());
+                    //  zpo07.setInfantApgarNa(zpo07InfantAssessmentVisit.getInfantApgarNa());
+                    //  zpo07.setInfantApgar1min(zpo07InfantAssessmentVisit.getInfantApgar1min());
+                    //  zpo07.setInfantApgar5min(zpo07InfantAssessmentVisit.getInfantApgar5min());
+                        zpo07.setInfantSkinEvalu(zpo07InfantAssessmentVisit.getInfantSkinEvalu());
+                        zpo07.setInfantRash(zpo07InfantAssessmentVisit.getInfantRash());
+                        zpo07.setInfantScarring(zpo07InfantAssessmentVisit.getInfantScarring());
+                        zpo07.setInfantOrganEvalu(zpo07InfantAssessmentVisit.getInfantOrganEvalu());
+                        zpo07.setInfantAbdominal(zpo07InfantAssessmentVisit.getInfantAbdominal());
+                        zpo07.setInfantLiverSpleen(zpo07InfantAssessmentVisit.getInfantLiverSpleen());
+                        zpo07.setInfantOae(zpo07InfantAssessmentVisit.getInfantOae());
+                        zpo07.setInfantHearingTest(zpo07InfantAssessmentVisit.getInfantHearingTest());
+                        zpo07.setInfantHearingOverall(zpo07InfantAssessmentVisit.getInfantHearingOverall());
+                        zpo07.setInfantRoae(zpo07InfantAssessmentVisit.getInfantRoae());
+                        zpo07.setInfantRaabr(zpo07InfantAssessmentVisit.getInfantRaabr());
+                        zpo07.setInfantLoae(zpo07InfantAssessmentVisit.getInfantLoae());
+                        zpo07.setInfantLaabr(zpo07InfantAssessmentVisit.getInfantLaabr());
+                        zpo07.setInfantBreastfeeding(zpo07InfantAssessmentVisit.getInfantBreastfeeding());
+                        zpo07.setInfantBreastReason(zpo07InfantAssessmentVisit.getInfantBreastReason());
+                        zpo07.setInfantBreastOther(zpo07InfantAssessmentVisit.getInfantBreastOther());
+                        zpo07.setInfantNeurodeve(zpo07InfantAssessmentVisit.getInfantNeurodeve());
+                        zpo07.setInfantAsymType(zpo07InfantAssessmentVisit.getInfantAsymType());
+                        zpo07.setInfantOtherMove(zpo07InfantAssessmentVisit.getInfantOtherMove());
+                        zpo07.setInfantExhibitOther(zpo07InfantAssessmentVisit.getInfantExhibitOther());
+                        zpo07.setInfantMicroce(zpo07InfantAssessmentVisit.getInfantMicroce());
+                        zpo07.setInfantDefinition(zpo07InfantAssessmentVisit.getInfantDefinition());
+                        zpo07.setInfantFurtherNeuro(zpo07InfantAssessmentVisit.getInfantFurtherNeuro());
+                        zpo07.setInfantFeverSymptom(zpo07InfantAssessmentVisit.getInfantFeverSymptom());
+                        zpo07.setInfantRashSymptom(zpo07InfantAssessmentVisit.getInfantRashSymptom());
+                        zpo07.setInfantItch(zpo07InfantAssessmentVisit.getInfantItch());
+                        zpo07.setInfantRashFirst(zpo07InfantAssessmentVisit.getInfantRashFirst());
+                        zpo07.setInfantRashDy(zpo07InfantAssessmentVisit.getInfantRashDy());
+                        zpo07.setInfantRashMn(zpo07InfantAssessmentVisit.getInfantRashMn());
+                        zpo07.setInfantRashYr(zpo07InfantAssessmentVisit.getInfantRashYr());
+                        zpo07.setInfantRashDur(zpo07InfantAssessmentVisit.getInfantRashDur());
+                        zpo07.setInfantRashSpread(zpo07InfantAssessmentVisit.getInfantRashSpread());
+                        zpo07.setInfantSpreadPart(zpo07InfantAssessmentVisit.getInfantSpreadPart());
+                        zpo07.setInfantFeverExperience(zpo07InfantAssessmentVisit.getInfantFeverExperience());
+                        zpo07.setInfantTempMeasure(zpo07InfantAssessmentVisit.getInfantTempMeasure());
+                        zpo07.setInfantHighTemp(zpo07InfantAssessmentVisit.getInfantHighTemp());
+                        zpo07.setInfantHightemUnit(zpo07InfantAssessmentVisit.getInfantHightemUnit());
+                        zpo07.setInfantTempunknown(zpo07InfantAssessmentVisit.getInfantTempunknown());
+                        zpo07.setInfantFeverDy(zpo07InfantAssessmentVisit.getInfantFeverDy());
+                        zpo07.setInfantFeverMn(zpo07InfantAssessmentVisit.getInfantFeverMn());
+                        zpo07.setInfantFeverYr(zpo07InfantAssessmentVisit.getInfantFeverYr());
+                        zpo07.setInfantFeverDur(zpo07InfantAssessmentVisit.getInfantFeverDur());
+                        zpo07.setInfantRedeyes(zpo07InfantAssessmentVisit.getInfantRedeyes());
+                        zpo07.setInfantRedeyesDy(zpo07InfantAssessmentVisit.getInfantRedeyesDy());
+                        zpo07.setInfantRedeyesMn(zpo07InfantAssessmentVisit.getInfantRedeyesMn());
+                        zpo07.setInfantRedeyesYr(zpo07InfantAssessmentVisit.getInfantRedeyesYr());
+                        zpo07.setInfantRedeyesDur(zpo07InfantAssessmentVisit.getInfantRedeyesDur());
+                        zpo07.setInfantJoint(zpo07InfantAssessmentVisit.getInfantJoint());
+                        zpo07.setInfantJointDy(zpo07InfantAssessmentVisit.getInfantJointDy());
+                        zpo07.setInfantJointMn(zpo07InfantAssessmentVisit.getInfantJointMn());
+                        zpo07.setInfantJointYr(zpo07InfantAssessmentVisit.getInfantJointYr());
+                        zpo07.setInfantJointDur(zpo07InfantAssessmentVisit.getInfantJointDur());
+                        zpo07.setInfantHeadache(zpo07InfantAssessmentVisit.getInfantHeadache());
+                        zpo07.setInfantHeadacheDy(zpo07InfantAssessmentVisit.getInfantHeadacheDy());
+                        zpo07.setInfantHeadacheMn(zpo07InfantAssessmentVisit.getInfantHeadacheMn());
+                        zpo07.setInfantHeadacheYr(zpo07InfantAssessmentVisit.getInfantHeadacheYr());
+                        zpo07.setInfantHeadaDur(zpo07InfantAssessmentVisit.getInfantHeadaDur());
+                        zpo07.setInfantSymptomOther(zpo07InfantAssessmentVisit.getInfantSymptomOther());
+                        zpo07.setInfantSpecifySymptom(zpo07InfantAssessmentVisit.getInfantSpecifySymptom());
+                        zpo07.setInfantOtherSymptom(zpo07InfantAssessmentVisit.getInfantOtherSymptom());
+                        zpo07.setInfantMedicare(zpo07InfantAssessmentVisit.getInfantMedicare());
+                        zpo07.setInfantCareDy(zpo07InfantAssessmentVisit.getInfantCareDy());
+                        zpo07.setInfantCareMn(zpo07InfantAssessmentVisit.getInfantCareMn());
+                        zpo07.setInfantCareYr(zpo07InfantAssessmentVisit.getInfantCareYr());
+                        zpo07.setInfantCareFacility(zpo07InfantAssessmentVisit.getInfantCareFacility());
+                        zpo07.setInfantHospitalized(zpo07InfantAssessmentVisit.getInfantHospitalized());
+                        zpo07.setInfantHospital(zpo07InfantAssessmentVisit.getInfantHospital());
+                        zpo07.setInfantDiagRubella(zpo07InfantAssessmentVisit.getInfantDiagRubella());
+                        zpo07.setInfantDiagDengue(zpo07InfantAssessmentVisit.getInfantDiagDengue());
+                        zpo07.setInfantDiagChikung(zpo07InfantAssessmentVisit.getInfantDiagChikung());
+                        zpo07.setInfantDiagZika(zpo07InfantAssessmentVisit.getInfantDiagZika());
+                        zpo07.setInfantDiagCytome(zpo07InfantAssessmentVisit.getInfantDiagCytome());
+                        zpo07.setInfantMedicine(zpo07InfantAssessmentVisit.getInfantMedicine());
+                        zpo07.setInfantMedName(zpo07InfantAssessmentVisit.getInfantMedName());
+                        // zpo07.setInfantSpDiary(zpo07InfantAssessmentVisit.getInfantSpDiary());
+                        // zpo07.setInfantPreResults(zpo07InfantAssessmentVisit.getInfantPreResults());
+                        // zpo07.setInfantReferr(zpo07InfantAssessmentVisit.getInfantReferr());
+                        // zpo07.setInfantOtherLab(zpo07InfantAssessmentVisit.getInfantOtherLab());
+                        zpo07.setInfantCommentsYn(zpo07InfantAssessmentVisit.getInfantCommentsYn());
+                        zpo07.setInfantComments2(zpo07InfantAssessmentVisit.getInfantComments2());
+                        zpo07.setInfantIdCompleting(zpo07InfantAssessmentVisit.getInfantIdCompleting());
+                        zpo07.setInfantDtComp(zpo07InfantAssessmentVisit.getInfantDtComp());
+                        zpo07.setInfantIdReviewer(zpo07InfantAssessmentVisit.getInfantIdReviewer());
+                        zpo07.setInfantDtReview(zpo07InfantAssessmentVisit.getInfantDtReview());
+                        zpo07.setInfantDtEnter(zpo07InfantAssessmentVisit.getInfantDtEnter());
+                        zpo07.setInfantIdDataEntry(zpo07InfantAssessmentVisit.getInfantIdDataEntry());
+                        zpo07.setPart1(1);
+                        zpo07.setIdInstancia(zpo07InfantAssessmentVisit.getIdInstancia());
+                        zpo07.setInfantDob(zpo07InfantAssessmentVisit.getInfantDob());
+                        // zpo07.setInfantWeeks(zpo07InfantAssessmentVisit.getInfantWeeks());
+                        // zpo07.setInfantDays(zpo07InfantAssessmentVisit.getInfantDays());
+                         zpo07.setInfantExhibited(zpo07InfantAssessmentVisit.getInfantExhibited());
                     }
 
                 }
 
-                if (zp07InfantAssessmentVisit.getPart2() != null) {
-                    if ((zp07InfantAssessmentVisit.getPart2() == 2) || (zp07InfantAssessmentVisit.getPart2() == 1 && zp07.getPart2() == null)) {
-                        zp07.setInfantVisitDate2(zp07InfantAssessmentVisit.getInfantVisitDate2());
-                        zp07.setInfantStatus2(zp07InfantAssessmentVisit.getInfantStatus2());
-                        zp07.setInfantDeathDt2(zp07InfantAssessmentVisit.getInfantDeathDt2());
-                        zp07.setInfantVisit2(zp07InfantAssessmentVisit.getInfantVisit2());
-                        zp07.setInfantOphth(zp07InfantAssessmentVisit.getInfantOphth());
-                        zp07.setInfantOphthType(zp07InfantAssessmentVisit.getInfantOphthType());
-                        zp07.setInfantOphthAbno(zp07InfantAssessmentVisit.getInfantOphthAbno());
-                        zp07.setInfantCommentsYn2(zp07InfantAssessmentVisit.getInfantCommentsYn2());
-                        zp07.setInfantComments2_2(zp07InfantAssessmentVisit.getInfantComments2_2());
-                        zp07.setInfantIdCompleting2(zp07InfantAssessmentVisit.getInfantIdCompleting2());
-                        zp07.setInfantDtComp2(zp07InfantAssessmentVisit.getInfantDtComp2());
-                        zp07.setInfantIdReviewer2(zp07InfantAssessmentVisit.getInfantIdReviewer2());
-                        zp07.setInfantDtReview2(zp07InfantAssessmentVisit.getInfantDtReview2());
-                        zp07.setInfantIdDataEntry2(zp07InfantAssessmentVisit.getInfantIdDataEntry2());
-                        zp07.setInfantDtEnter2(zp07InfantAssessmentVisit.getInfantDtEnter2());
-                        zp07.setPart2(1);
-                        zp07.setIdInstancia2(zp07InfantAssessmentVisit.getIdInstancia2());
+                if (zpo07InfantAssessmentVisit.getPart2() != null) {
+                    if ((zpo07InfantAssessmentVisit.getPart2() == 2) || (zpo07InfantAssessmentVisit.getPart2() == 1 && zpo07.getPart2() == null)) {
+                        zpo07.setInfantVisitDate2(zpo07InfantAssessmentVisit.getInfantVisitDate2());
+                        zpo07.setInfantStatus2(zpo07InfantAssessmentVisit.getInfantStatus2());
+                        zpo07.setInfantDeathDt2(zpo07InfantAssessmentVisit.getInfantDeathDt2());
+                        zpo07.setInfantVisit2(zpo07InfantAssessmentVisit.getInfantVisit2());
+                        zpo07.setInfantOphth(zpo07InfantAssessmentVisit.getInfantOphth());
+                        zpo07.setInfantOphthType(zpo07InfantAssessmentVisit.getInfantOphthType());
+                        zpo07.setInfantOphthAbno(zpo07InfantAssessmentVisit.getInfantOphthAbno());
+                        zpo07.setInfantCommentsYn2(zpo07InfantAssessmentVisit.getInfantCommentsYn2());
+                        zpo07.setInfantComments2_2(zpo07InfantAssessmentVisit.getInfantComments2_2());
+                        zpo07.setInfantIdCompleting2(zpo07InfantAssessmentVisit.getInfantIdCompleting2());
+                        zpo07.setInfantDtComp2(zpo07InfantAssessmentVisit.getInfantDtComp2());
+                        zpo07.setInfantIdReviewer2(zpo07InfantAssessmentVisit.getInfantIdReviewer2());
+                        zpo07.setInfantDtReview2(zpo07InfantAssessmentVisit.getInfantDtReview2());
+                        zpo07.setInfantIdDataEntry2(zpo07InfantAssessmentVisit.getInfantIdDataEntry2());
+                        zpo07.setInfantDtEnter2(zpo07InfantAssessmentVisit.getInfantDtEnter2());
+                        zpo07.setPart2(1);
+                        zpo07.setIdInstancia2(zpo07InfantAssessmentVisit.getIdInstancia2());
                     }
                 }
 
-                if (zp07InfantAssessmentVisit.getPart3() != null) {
-                    if ((zp07InfantAssessmentVisit.getPart3() == 2) || (zp07InfantAssessmentVisit.getPart3() == 1 && zp07.getPart3() == null)) {
-                        zp07.setInfantVisitDate3(zp07InfantAssessmentVisit.getInfantVisitDate3());
-                        zp07.setInfantStatus3(zp07InfantAssessmentVisit.getInfantStatus3());
-                        zp07.setInfantDeathDt3(zp07InfantAssessmentVisit.getInfantDeathDt3());
-                        zp07.setInfantVisit3(zp07InfantAssessmentVisit.getInfantVisit3());
-                        zp07.setInfantEvaluation(zp07InfantAssessmentVisit.getInfantEvaluation());
-                        zp07.setInfantNeuroAsq(zp07InfantAssessmentVisit.getInfantNeuroAsq());
-                        zp07.setInfantAsqCommuni(zp07InfantAssessmentVisit.getInfantAsqCommuni());
-                        zp07.setInfantAsqGross(zp07InfantAssessmentVisit.getInfantAsqGross());
-                        zp07.setInfantAsqFine(zp07InfantAssessmentVisit.getInfantAsqFine());
-                        zp07.setInfantAsqProblem(zp07InfantAssessmentVisit.getInfantAsqProblem());
-                        zp07.setInfantAsqPersonal(zp07InfantAssessmentVisit.getInfantAsqPersonal());
-                        zp07.setInfantNeuroBisd(zp07InfantAssessmentVisit.getInfantNeuroBisd());
-                        zp07.setInfantCgScore(zp07InfantAssessmentVisit.getInfantCgScore());
-                        zp07.setInfantCgRisk(zp07InfantAssessmentVisit.getInfantCgRisk());
-                        zp07.setInfantRpScore(zp07InfantAssessmentVisit.getInfantRpScore());
-                        zp07.setInfantRpRisk(zp07InfantAssessmentVisit.getInfantRpRisk());
-                        zp07.setInfantEpScore(zp07InfantAssessmentVisit.getInfantEpScore());
-                        zp07.setInfantEpRisk(zp07InfantAssessmentVisit.getInfantEpRisk());
-                        zp07.setInfantFmScore(zp07InfantAssessmentVisit.getInfantFmScore());
-                        zp07.setInfantFmRisk(zp07InfantAssessmentVisit.getInfantFmRisk());
-                        zp07.setInfantGmScore(zp07InfantAssessmentVisit.getInfantGmScore());
-                        zp07.setInfantGmRisk(zp07InfantAssessmentVisit.getInfantGmRisk());
-                        zp07.setInfantNeuroOther(zp07InfantAssessmentVisit.getInfantNeuroOther());
-                        zp07.setInfantOtherName(zp07InfantAssessmentVisit.getInfantOtherName());
-                        zp07.setInfantOtherScore(zp07InfantAssessmentVisit.getInfantOtherScore());
-                        zp07.setInfantResultScreening(zp07InfantAssessmentVisit.getInfantResultScreening());
-                        zp07.setInfantReferTesting(zp07InfantAssessmentVisit.getInfantReferTesting());
-                        zp07.setInfantCommentsYn3(zp07InfantAssessmentVisit.getInfantCommentsYn3());
-                        zp07.setInfantComments2_3(zp07InfantAssessmentVisit.getInfantComments2_3());
-                        zp07.setInfantIdCompleting3(zp07InfantAssessmentVisit.getInfantIdCompleting3());
-                        zp07.setInfantDtComp3(zp07InfantAssessmentVisit.getInfantDtComp3());
-                        zp07.setInfantIdReviewer3(zp07InfantAssessmentVisit.getInfantIdReviewer3());
-                        zp07.setInfantDtReview3(zp07InfantAssessmentVisit.getInfantDtReview3());
-                        zp07.setInfantIdDataEntry3(zp07InfantAssessmentVisit.getInfantIdDataEntry3());
-                        zp07.setInfantDtEnter3(zp07InfantAssessmentVisit.getInfantDtEnter3());
-                        zp07.setPart3(1);
-                        zp07.setIdInstancia3(zp07InfantAssessmentVisit.getIdInstancia3());
+                if (zpo07InfantAssessmentVisit.getPart3() != null) {
+                    if ((zpo07InfantAssessmentVisit.getPart3() == 2) || (zpo07InfantAssessmentVisit.getPart3() == 1 && zpo07.getPart3() == null)) {
+                        zpo07.setInfantVisitDate3(zpo07InfantAssessmentVisit.getInfantVisitDate3());
+                        zpo07.setInfantStatus3(zpo07InfantAssessmentVisit.getInfantStatus3());
+                        zpo07.setInfantDeathDt3(zpo07InfantAssessmentVisit.getInfantDeathDt3());
+                        zpo07.setInfantVisit3(zpo07InfantAssessmentVisit.getInfantVisit3());
+                        zpo07.setInfantEvaluation(zpo07InfantAssessmentVisit.getInfantEvaluation());
+                        zpo07.setInfantNeuroAsq(zpo07InfantAssessmentVisit.getInfantNeuroAsq());
+                        zpo07.setInfantAsqCommuni(zpo07InfantAssessmentVisit.getInfantAsqCommuni());
+                        zpo07.setInfantAsqGross(zpo07InfantAssessmentVisit.getInfantAsqGross());
+                        zpo07.setInfantAsqFine(zpo07InfantAssessmentVisit.getInfantAsqFine());
+                        zpo07.setInfantAsqProblem(zpo07InfantAssessmentVisit.getInfantAsqProblem());
+                        zpo07.setInfantAsqPersonal(zpo07InfantAssessmentVisit.getInfantAsqPersonal());
+                        zpo07.setInfantNeuroBisd(zpo07InfantAssessmentVisit.getInfantNeuroBisd());
+                        zpo07.setInfantCgScore(zpo07InfantAssessmentVisit.getInfantCgScore());
+                        zpo07.setInfantCgRisk(zpo07InfantAssessmentVisit.getInfantCgRisk());
+                        zpo07.setInfantRpScore(zpo07InfantAssessmentVisit.getInfantRpScore());
+                        zpo07.setInfantRpRisk(zpo07InfantAssessmentVisit.getInfantRpRisk());
+                        zpo07.setInfantEpScore(zpo07InfantAssessmentVisit.getInfantEpScore());
+                        zpo07.setInfantEpRisk(zpo07InfantAssessmentVisit.getInfantEpRisk());
+                        zpo07.setInfantFmScore(zpo07InfantAssessmentVisit.getInfantFmScore());
+                        zpo07.setInfantFmRisk(zpo07InfantAssessmentVisit.getInfantFmRisk());
+                        zpo07.setInfantGmScore(zpo07InfantAssessmentVisit.getInfantGmScore());
+                        zpo07.setInfantGmRisk(zpo07InfantAssessmentVisit.getInfantGmRisk());
+                        zpo07.setInfantNeuroOther(zpo07InfantAssessmentVisit.getInfantNeuroOther());
+                        zpo07.setInfantOtherName(zpo07InfantAssessmentVisit.getInfantOtherName());
+                        zpo07.setInfantOtherScore(zpo07InfantAssessmentVisit.getInfantOtherScore());
+                        zpo07.setInfantResultScreening(zpo07InfantAssessmentVisit.getInfantResultScreening());
+                        zpo07.setInfantReferTesting(zpo07InfantAssessmentVisit.getInfantReferTesting());
+                        zpo07.setInfantCommentsYn3(zpo07InfantAssessmentVisit.getInfantCommentsYn3());
+                        zpo07.setInfantComments2_3(zpo07InfantAssessmentVisit.getInfantComments2_3());
+                        zpo07.setInfantIdCompleting3(zpo07InfantAssessmentVisit.getInfantIdCompleting3());
+                        zpo07.setInfantDtComp3(zpo07InfantAssessmentVisit.getInfantDtComp3());
+                        zpo07.setInfantIdReviewer3(zpo07InfantAssessmentVisit.getInfantIdReviewer3());
+                        zpo07.setInfantDtReview3(zpo07InfantAssessmentVisit.getInfantDtReview3());
+                        zpo07.setInfantIdDataEntry3(zpo07InfantAssessmentVisit.getInfantIdDataEntry3());
+                        zpo07.setInfantDtEnter3(zpo07InfantAssessmentVisit.getInfantDtEnter3());
+                        zpo07.setPart3(1);
+                        zpo07.setIdInstancia3(zpo07InfantAssessmentVisit.getIdInstancia3());
                     }
                 }
 
 
-                zp07.setRecordDate(zp07InfantAssessmentVisit.getRecordDate());
-                zp07.setRecordUser(zp07InfantAssessmentVisit.getRecordUser());
-                zp07.setInstancePath(zp07InfantAssessmentVisit.getInstancePath());
-                zp07.setEstado(zp07InfantAssessmentVisit.getEstado());
-                zp07.setStart(zp07InfantAssessmentVisit.getStart());
-                zp07.setEnd(zp07InfantAssessmentVisit.getEnd());
-                zp07.setDeviceid(zp07InfantAssessmentVisit.getDeviceid());
-                zp07.setSimserial(zp07InfantAssessmentVisit.getSimserial());
-                zp07.setPhonenumber(zp07InfantAssessmentVisit.getPhonenumber());
-                zp07.setToday(zp07InfantAssessmentVisit.getToday());
+                zpo07.setRecordDate(zpo07InfantAssessmentVisit.getRecordDate());
+                zpo07.setRecordUser(zpo07InfantAssessmentVisit.getRecordUser());
+                zpo07.setInstancePath(zpo07InfantAssessmentVisit.getInstancePath());
+                zpo07.setEstado(zpo07InfantAssessmentVisit.getEstado());
+                zpo07.setStart(zpo07InfantAssessmentVisit.getStart());
+                zpo07.setEnd(zpo07InfantAssessmentVisit.getEnd());
+                zpo07.setDeviceid(zpo07InfantAssessmentVisit.getDeviceid());
+                zpo07.setSimserial(zpo07InfantAssessmentVisit.getSimserial());
+                zpo07.setPhonenumber(zpo07InfantAssessmentVisit.getPhonenumber());
+                zpo07.setToday(zpo07InfantAssessmentVisit.getToday());
 
-                session.update(zp07);
+                session.update(zpo07);
             } else {
-                session.save(zp07InfantAssessmentVisit);
+                session.save(zpo07InfantAssessmentVisit);
             }
         }
     }
 
 
     /**
-     * Retorna un formulario Zp07InfantAssessmentVisit
-     * @param recordId del Zp07InfantAssessmentVisit a retornar
-     * @return un Zp07InfantAssessmentVisit
+     * Retorna un formulario Zpo07InfantAssessmentVisit
+     * @param recordId del Zpo07InfantAssessmentVisit a retornar
+     * @return un Zpo07InfantAssessmentVisit
      */
-    public Zpo07InfantAssessmentVisit getZp07InfantAssessmentVisit(String recordId, String event){
+    public Zpo07InfantAssessmentVisit getZpo07InfantAssessmentVisit(String recordId, String event){
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM Zp07InfantAssessmentVisit where recordId = :recordId and eventName = :event");
+        Query query = session.createQuery("FROM Zpo07InfantAssessmentVisit where recordId = :recordId and eventName = :event");
         query.setParameter("recordId",recordId);
         query.setParameter("event",event);
         return (Zpo07InfantAssessmentVisit)query.uniqueResult();
