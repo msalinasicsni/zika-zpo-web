@@ -115,6 +115,7 @@
                                                         <option value="zpo04_extended_section_a_to_d"><spring:message code="zpo04AD" /></option>
                                                         <option value="zpo04_extended_section_e"><spring:message code="zpo04E" /></option>
                                                         <option value="zpo04_extended_section_f"><spring:message code="zpo04F" /></option>
+                                                        <option value="zpo04_extended_section_a_to_f"><spring:message code="zpo04AF" /></option>
                                                         <option value="zpo05_delivery"><spring:message code="zpo05" /></option>
                                                         <option value="zpo08_study_exit"><spring:message code="zpo08" /></option>
                                                         <option value="zpo_datos_infante"><spring:message code="zpoInfante" /></option>

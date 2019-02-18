@@ -165,6 +165,7 @@ INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo02', '0', '
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo04AD', '0', 'Formulario Zpo04 Extendido Seccion A-D');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo04E', '0', 'Formulario Zpo04 Extendido Seccion E');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo04F', '0', 'Formulario Zpo04 Extendido Seccion F');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo04AF', '0', 'Formulario Zpo04 Extendido Seccion A-F');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo05', '0', 'Formulario Zpo05 Parto');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('zpo08', '0', 'Formulario Zpo08 Salida del estudio');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('allforms', '0', 'Todos');
@@ -282,7 +283,7 @@ INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_scree
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_tri2', '0', '2do Trimestre');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_tri3', '0', '3er Trimestre');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_unsched', '0', 'No programado');
-INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('lbl.any', '0', 'Nunguno');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('lbl.any', '0', 'Ninguno');
 
 /*Catalogos*/
 INSERT INTO `roles` (`ROL`) VALUES ('ROLE_CATALOG');
