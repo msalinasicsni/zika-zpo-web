@@ -329,7 +329,7 @@ public class Zpo07dInfantBayleyScales extends BaseMetaData implements Auditable 
         this.infantSuScore = infantSuScore;
     }
 
-    @Column(name = "infant_sucom_score  ", length = 3)
+    @Column(name = "infant_sucom_score", length = 3)
     public String getInfantSucomScore() {
         return infantSucomScore;
     }
