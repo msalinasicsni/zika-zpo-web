@@ -41,7 +41,7 @@ public class Zpo08StudyExitService {
     @SuppressWarnings("unchecked")
     public List<Zpo08StudyExit> getZpo08StudyExitByUser(String username){
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("FROM Zpo08StudyExit zpo08 where zpo08.pasive = '0' and zpo08.recordId in (select zpo00.recordId from Zpo00Screening zpo00 where zpo00.pasive = '0')");
+        Query query = session.createQuery("FROM Zpo08StudyExit zpo08 where zpo08.pasive = '0' and zpo08.recordId in (select zpo00.recordId from Zpo00Screening zpo00 where zpo00.pasive = '0') or zpo08.recordId in (select zpo00.recordId from ZpoInfantData zpo00 where zpo00.pasive = '0') ");
         //query.setParameter("usuarioactual",username);
         return query.list();
     }
