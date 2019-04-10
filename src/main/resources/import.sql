@@ -284,6 +284,10 @@ INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_tri2'
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_tri3', '0', '3er Trimestre');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('us_event_unsched', '0', 'No programado');
 INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('lbl.any', '0', 'Ninguno');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_1', '0', 'No programado 1');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_2', '0', 'No programado 2');
+INSERT INTO `messages` (`messageKey`, `catPasive`, `es`) VALUES ('unscheduled_visit_3', '0', 'No programado 3');
+
 
 /*Catalogos*/
 INSERT INTO `roles` (`ROL`) VALUES ('ROLE_CATALOG');

@@ -2566,6 +2566,9 @@ public class ExportarService {
         redCapEvents.add(Constants.ENTRY);
         redCapEvents.add(Constants.MONTHS12);
         redCapEvents.add(Constants.MONTHS24);
+        redCapEvents.add(Constants.UNSHED1);
+        redCapEvents.add(Constants.UNSHED2);
+        redCapEvents.add(Constants.UNSHED3);
         return redCapEvents;
     }
 
