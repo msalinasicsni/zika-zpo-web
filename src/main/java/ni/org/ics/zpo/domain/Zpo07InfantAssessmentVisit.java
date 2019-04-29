@@ -29,13 +29,13 @@ public class Zpo07InfantAssessmentVisit extends BaseMetaData implements Auditabl
     private String infantTmpUnit;
     private Float infantWt;
     private String infantWtUnit;
-    private Float infantWtPercen;
+    private String infantWtPercen;
     private String infantWtpercenNa;
     private Float infantLength;
-    private Float infantLengthPercen;
+    private String infantLengthPercen;
     private String infantLenpercenNa;
     private Float infantHeadcircu;
-    private Float infantHeapercen;
+    private String infantHeapercen;
     private String infantHeapercenNa;
     private String infantHeasize;//nuevo
     private String infantSkinEvalu;
@@ -346,14 +346,15 @@ public class Zpo07InfantAssessmentVisit extends BaseMetaData implements Auditabl
         this.infantWtUnit = infantWtUnit;
     }
 
-    @Column(name = "infant_wt_percen")
-    public Float getInfantWtPercen() {
+    @Column(name = "infant_wt_percen", length = 4)
+    public String getInfantWtPercen() {
         return infantWtPercen;
     }
 
-    public void setInfantWtPercen(Float infantWtPercen) {
+    public void setInfantWtPercen(String infantWtPercen) {
         this.infantWtPercen = infantWtPercen;
     }
+
 
     @Column(name = "infant_wtpercen_na", length = 2)
     public String getInfantWtpercenNa() {
@@ -373,12 +374,12 @@ public class Zpo07InfantAssessmentVisit extends BaseMetaData implements Auditabl
         this.infantLength = infantLength;
     }
 
-    @Column(name = "infant_length_percen")
-    public Float getInfantLengthPercen() {
+    @Column(name = "infant_length_percen", length = 4)
+    public String getInfantLengthPercen() {
         return infantLengthPercen;
     }
 
-    public void setInfantLengthPercen(Float infantLengthPercen) {
+    public void setInfantLengthPercen(String infantLengthPercen) {
         this.infantLengthPercen = infantLengthPercen;
     }
 
@@ -400,12 +401,12 @@ public class Zpo07InfantAssessmentVisit extends BaseMetaData implements Auditabl
         this.infantHeadcircu = infantHeadcircu;
     }
 
-    @Column(name = "infant_heapercen")
-    public Float getInfantHeapercen() {
+    @Column(name = "infant_heapercen", length = 4)
+    public String getInfantHeapercen() {
         return infantHeapercen;
     }
 
-    public void setInfantHeapercen(Float infantHeapercen) {
+    public void setInfantHeapercen(String infantHeapercen) {
         this.infantHeapercen = infantHeapercen;
     }
 
