@@ -1,7 +1,8 @@
 package ni.org.ics.zpo.service;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import com.mysql.cj.jdbc.MysqlDataSource;
 import ni.org.ics.zpo.domain.audit.AuditTrail;
+import ni.org.ics.zpo.utils.ConnectionUtil;
 import ni.org.ics.zpo.utils.DateUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,19 +24,8 @@ public class EditarDatosService {
     @Resource(name = "auditTrailService")
     private AuditTrailService auditTrailService;
 
-    private static Connection getConnection() throws Exception{
-        MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUser("zikazpo");
-        dataSource.setPassword("jiKAQude");
-        dataSource.setServerName("localhost");
-        dataSource.setPort(3306);
-        dataSource.setDatabaseName("zika_zpo");
-
-        return dataSource.getConnection();
-    }
-
     public List<String> getTableMetaData(String tableName) throws Exception{
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         List<String> columns = new ArrayList<String>();
         try {
             DatabaseMetaData meta = con.getMetaData();
@@ -106,7 +96,7 @@ public class EditarDatosService {
      * @throws Exception
      */
     public int updateProperty(String tabla, String evento, String id, String propiedad, String valor, boolean setNull, String actorId) throws Exception {
-        Connection connection = getConnection();
+        Connection connection = ConnectionUtil.getConnection();
         Statement statement = null;
         ResultSet resultSet = null;
         int registros = 0;

@@ -1,6 +1,7 @@
 package ni.org.ics.zpo.service;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import com.mysql.cj.jdbc.MysqlDataSource;
+import ni.org.ics.zpo.utils.ConnectionUtil;
 import ni.org.ics.zpo.utils.Constants;
 import ni.org.ics.zpo.utils.ExportParameters;
 import org.hibernate.Query;
@@ -33,19 +34,8 @@ public class ExportarService {
     @Resource(name="sessionFactory")
     private SessionFactory sessionFactory;
 
-    private static Connection getConnection() throws Exception{
-        MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUser("zikazip");
-        dataSource.setPassword("jeKAQudi");
-        dataSource.setServerName("localhost");
-        dataSource.setPort(3306);
-        dataSource.setDatabaseName("zika_zpo");
-
-        return dataSource.getConnection();
-    }
-
     private List<String> getTableMetaData(String tableName) throws Exception{
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         List<String> columns = new ArrayList<String>();
         try {
             DatabaseMetaData meta = con.getMetaData();
@@ -91,7 +81,7 @@ public class ExportarService {
     public StringBuffer getZp00ExportData(ExportParameters exportParameters) throws Exception{
         StringBuffer sb = new StringBuffer();
 
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -178,7 +168,7 @@ public class ExportarService {
     public StringBuffer getZp01ADExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -262,7 +252,7 @@ public class ExportarService {
     public StringBuffer getZp01EExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -436,7 +426,7 @@ public class ExportarService {
     public StringBuffer getZp01FKExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -534,7 +524,7 @@ public class ExportarService {
     public StringBuffer getZp02ExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -754,7 +744,7 @@ public class ExportarService {
     public StringBuffer getZp03ExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -923,7 +913,7 @@ public class ExportarService {
     public StringBuffer getZp04ADExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -1038,7 +1028,7 @@ public class ExportarService {
     public StringBuffer getZp04EExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -1119,7 +1109,7 @@ public class ExportarService {
     public StringBuffer getZp04FHExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -1221,7 +1211,7 @@ public class ExportarService {
     public StringBuffer getZp05ExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -1327,7 +1317,7 @@ public class ExportarService {
     public StringBuffer getZp06ExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -1483,7 +1473,7 @@ public class ExportarService {
     public StringBuffer getZp08ExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -1565,7 +1555,7 @@ public class ExportarService {
     public StringBuffer getZp07ExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -1714,7 +1704,7 @@ public class ExportarService {
     public StringBuffer getZp02dExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "";
@@ -1799,7 +1789,7 @@ public class ExportarService {
     }
 
     private List<String[]> getAllTableMetaData(String[] tableNames) throws Exception{
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         List<String[]> columns = new ArrayList<String[]>();
         try {
             DatabaseMetaData meta = con.getMetaData();
@@ -1844,7 +1834,7 @@ public class ExportarService {
     public StringBuffer getAllExportData(ExportParameters exportParameters) throws Exception{
 
         StringBuffer sb = new StringBuffer();
-        Connection con = getConnection();
+        Connection con = ConnectionUtil.getConnection();
         PreparedStatement pStatement = null;
         ResultSet res = null;
         String columnas = "record_id,redcap_event_name";
